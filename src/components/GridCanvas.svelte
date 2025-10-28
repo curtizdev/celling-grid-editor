@@ -7,8 +7,8 @@
 		CELL_TYPE_TO_INDEX,
 		type CellDefinition,
 		type CellType
-	} from '$lib/types/grid';
-	import { gridStore, selectedTool, type GridState, type ToolId } from '$lib/stores/grid-store';
+	} from '../types/grid';
+	import { gridStore, selectedTool, type GridState, type ToolId } from '../stores/grid-store';
 
 	type PointerMode = 'idle' | 'panning' | 'painting' | 'moving';
 	type CellPosition = { row: number; col: number };

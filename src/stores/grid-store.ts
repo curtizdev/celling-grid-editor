@@ -7,7 +7,7 @@ import {
 	DEFAULT_ROWS,
 	INDEX_TO_CELL_TYPE,
 	type CellType
-} from '$lib/types/grid';
+} from '../types/grid';
 
 const STORAGE_KEY = 'ceiling-grid-state-v2';
 const STORAGE_VERSION = 1;

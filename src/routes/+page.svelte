@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Toolbar from '$lib/components/Toolbar.svelte';
-	import GridCanvas from '$lib/components/GridCanvas.svelte';
+	import Toolbar from '../components/Toolbar.svelte';
+	import GridCanvas from '../components/GridCanvas.svelte';
 </script>
 
 <div class="flex min-h-screen flex-col bg-slate-50">
@@ -15,7 +15,7 @@
 	<Toolbar />
 	<main class="flex flex-1 flex-col items-center justify-center p-4">
 		<div
-			class="relative flex aspect-[4/3] w-full max-w-6xl items-center justify-center rounded-xl bg-white p-4 shadow-lg"
+			class="relative flex aspect-[4/3] w-full max-w-7xl items-center justify-center rounded-xl bg-white p-4 shadow-lg"
 		>
 			<GridCanvas />
 		</div>

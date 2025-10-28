@@ -56,18 +56,34 @@ pnpm lint        # ESLint + TypeScript checking (configured via eslint.config.js
 
 ```
 src/
+├─ components/
+│  ├─ GridCanvas.svelte
+│  └─ Toolbar.svelte
+├─ stores/
+│  ├─ grid-store.ts
+│  └─ grid-store.spec.ts
+├─ types/
+│  └─ grid.ts
+├─ routes/
+│  ├─ +page.svelte
+│  ├─ +layout.svelte
+│  └─ page.svelte.spec.ts
 ├─ lib/
-│  ├─ components/
-│  │  ├─ GridCanvas.svelte
-│  │  └─ Toolbar.svelte
-│  ├─ stores/
-│  │  └─ grid-store.ts
-│  ├─ types/
-│  │  └─ grid.ts
-│  └─ index.ts
-└─ routes/
-	└─ +page.svelte
+│  └─ assets/
+│     └─ favicon.svg
+├─ app.html
+├─ app.css
+├─ app.d.ts
+└─ demo.spec.ts
 ```
+
+**Note:**
+
+- Main components are in `src/components`.
+- State management is in `src/stores`, types in `src/types`.
+- Only assets are in `src/lib/assets`.
+- If you see TypeScript errors about missing files, check your imports and the `tsconfig.json` `include` array.
+- There is no `src/lib/components` directory; update your imports if needed.
 
 ## ♻️ Persistence & data model
 

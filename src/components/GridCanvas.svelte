@@ -321,6 +321,13 @@
 		if (!paintType) return;
 		const index = row * gridState.cols + col;
 		const currentIndex = gridState.data[index];
+		const currentType = CELL_DEFINITIONS[currentIndex]?.type;
+
+		// Prevent painting or moving onto 'invalid' cells unless erasing or marking as invalid
+		if (currentType === 'invalid' && paintType !== 'empty' && paintType !== 'invalid') {
+			return;
+		}
+
 		if (paintType === 'empty') {
 			if (currentIndex !== 0) {
 				gridStore.clearCell(row, col);

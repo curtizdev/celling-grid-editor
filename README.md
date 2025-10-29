@@ -12,15 +12,15 @@ An interactive Svelte + TypeScript prototype for the Consigli frontend take-home
 
 ## 🧱 Architecture overview
 
-| Area                                   | Notes                                                                                                                                     |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/lib/types/grid.ts`                | Centralises grid constants, cell metadata, and size constraints.                                                                          |
-| `src/lib/stores/grid-store.ts`         | Svelte store that keeps grid state in a typed array, exposes mutation helpers (set, move, resize, reset), and persists to `localStorage`. |
-| `src/lib/components/GridCanvas.svelte` | Canvas renderer + interaction layer (paint, move, pan, zoom). Only the visible cells are redrawn per frame.                               |
-| `src/lib/components/Toolbar.svelte`    | Tool selection, grid resizing controls, and live inventory metrics.                                                                       |
-| `src/routes/+page.svelte`              | Page shell, copy, and layout; stitches toolbar and canvas together.                                                                       |
+| Area                               | Notes                                                                                                                                     |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/types/grid.ts`                | Centralises grid constants, cell metadata, and size constraints.                                                                          |
+| `src/stores/grid-store.ts`         | Svelte store that keeps grid state in a typed array, exposes mutation helpers (set, move, resize, reset), and persists to `localStorage`. |
+| `src/components/GridCanvas.svelte` | Canvas renderer + interaction layer (paint, move, pan, zoom). Only the visible cells are redrawn per frame.                               |
+| `src/components/Toolbar.svelte`    | Tool selection, grid resizing controls, and live inventory metrics.                                                                       |
+| `src/routes/+page.svelte`          | Page shell, copy, and layout; stitches toolbar and canvas together.                                                                       |
 
-The project keeps shared pieces in `$lib` and exports them via `src/lib/index.ts` for clean imports.
+Shared types and constants are in `src/types`. State management is in `src/stores`. UI components are in `src/components`. Assets are in `src/lib/assets`.
 
 ## 🚀 Getting started
 
